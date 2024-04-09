@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "work_categories",
+  "info": {
+    "singularName": "work-category",
+    "pluralName": "work-categories",
+    "displayName": "Work Category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "work": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::work.work",
+      "inversedBy": "work_categories"
+    }
+  }
+}
